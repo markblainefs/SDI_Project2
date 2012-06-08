@@ -17,7 +17,7 @@
 		} else {
 			console.log("We aren\'t driving to Bonnaroo");
 		};
-	};   //end hoDoWeGetThere
+	};	//end hoDoWeGetThere
 	
 	var readyToCamp = function(tent,bag){
 		var everythingReady = (tent && bag);
@@ -25,11 +25,23 @@
 			console.log("Let\'s go camping");
 		} else {
 			console.log("We need to do some shopping");
-		}
-
-	}
+		};
+		return everythingReady;
+	};	//end readyToCamp
 	
+	
+	var stayHydrated = function(waterNeeded){
+		var waterHad = 2;
+		while (waterHad < waterNeeded) {
+			console.log("We only have " + waterHad + " bottles, but we need " + waterNeeded + " bottles");
+			waterHad++;
+		};
+		return waterHad;
+	};
 	
 	
 	howDoWeGetThere(transportation);
-	readyToCamp(tentCamping,sleepingBag)
+	console.log("The thought that I am ready to camp is " + readyToCamp(tentCamping,sleepingBag));
+	console.log(stayHydrated(12) + " bottles should be plenty of water");
+	
+	
