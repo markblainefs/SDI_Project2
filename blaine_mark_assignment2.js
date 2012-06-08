@@ -4,21 +4,32 @@
 //SDI 1206;
 //Assignment 2;
 
-	var bandsPlaying ["Ludacris", "Red Hot Chili Peppers", "Radiohead"];
+	var bandsPlaying = ["Ludacris", "Red Hot Chili Peppers", "Radiohead"];
 	var startTime = 1800;
 	var stageName = "Where";
-	var transportaion = "car";
-	var doIHaveATicket = true;
+	var transportation = "car";
+	var sleepingBag = true;
+	var tentCamping = false;
 	
-	var howDoWeGetThere = function(){
-		if (transportation === "car"){
+	var howDoWeGetThere = function(vehicle){
+		if (vehicle === "car"){
 			console.log("We are driving to Tennessee");
 		} else {
-			console.log("We need to find a way to Bonnaroo");
+			console.log("We aren\'t driving to Bonnaroo");
 		};
+	};   //end hoDoWeGetThere
+	
+	var readyToCamp = function(tent,bag){
+		var everythingReady = (tent && bag);
+		if (everythingReady){
+			console.log("Let\'s go camping");
+		} else {
+			console.log("We need to do some shopping");
+		}
+
 	}
 	
-	var canIGoToBonaroo = function(){
-		if (doIHaveATicket)
-		
-	}
+	
+	
+	howDoWeGetThere(transportation);
+	readyToCamp(tentCamping,sleepingBag)
