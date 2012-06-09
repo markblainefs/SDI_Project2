@@ -39,9 +39,15 @@
 		return waterHad;
 	};
 	
-	
+	var whatIsThePlan = function(stage,section){
+		var food = "hot dog";
+		var drink = "Coke";
+		var plan = "I\'m going to eat a " + food + " and drink " + drink + " in the " + section + " section of the " + stage + " stage";
+		return plan;
+	};
+		
 	howDoWeGetThere(transportation);
 	console.log("The thought that I am ready to camp is " + readyToCamp(tentCamping,sleepingBag));
 	console.log(stayHydrated(12) + " bottles should be plenty of water");
-	
+	console.log(whatIsThePlan("What","VIP"));
 	
