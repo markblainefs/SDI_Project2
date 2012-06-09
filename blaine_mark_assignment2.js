@@ -4,7 +4,7 @@
 //SDI 1206;
 //Assignment 2;
 
-	var bandsPlaying = ["Ludacris", "Red Hot Chili Peppers", "Radiohead"];
+	var bandsPlaying = ["Ludacris", " Red Hot Chili Peppers", " Radiohead"];
 	var startTime = 1800;
 	var stageName = "Where";
 	var transportation = "car";
@@ -45,9 +45,20 @@
 		var plan = "I\'m going to eat a " + food + " and drink " + drink + " in the " + section + " section of the " + stage + " stage";
 		return plan;
 	};
+	
+	var whoAndWhen = function(showStartTime,bandsToSee){
+		lengthOfShow = 120;
+		numberOfShows = bandsToSee.length;
+		for (var show=0; show < numberOfShows; show++){
+			console.log("We'll watch" + bandsToSee[show] + " at " + showStartTime + " hours");
+			showStartTime = showStartTime+lengthOfShow;
+		};
+		return bandsToSee;
+	}
 		
 	howDoWeGetThere(transportation);
 	console.log("The thought that I am ready to camp is " + readyToCamp(tentCamping,sleepingBag));
 	console.log(stayHydrated(12) + " bottles should be plenty of water");
 	console.log(whatIsThePlan("What","VIP"));
+	console.log(whoAndWhen(startTime,bandsPlaying) + " will be a great line-up");
 	
